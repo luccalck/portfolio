@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./public/logo512.png" alt="Logo" width="120" />
+  <h1>Lucca Castilho | Professional Portfolio ✨</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+    <strong>A high-end, dynamic, and fully responsive digital showcase of my engineering career, technical credentials, and active projects.</strong>
+  </p>
+</div>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+## 🚀 Overview
 
-### `npm start`
+This repository houses the source code for my professional portfolio. Engineered with modern UI/UX principles, the architecture entirely revolves around fluid interactions, dark/light thematic dualities, and highly optimized responsive breakpoints.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The interface leverages **Glassmorphism**, Custom Native CSS lighting (radial glows), and intricate scroll-fade mechanics powered by Framer Motion. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*(Note: Live deployment link will be available soon via Vercel).*
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧠 Core Architecture & Features
 
-### `npm run build`
+- **Dark/Light Mode Ecosystem:** A custom Context API state that globally shifts palettes, card borders, and neon-accents without flashing.
+- **i18n Translation Engine:** Dynamic English (EN) and Portuguese (PT) context mapping, allowing instantaneous locale changes.
+- **Advanced Micro-Interactions:** Custom magnetic mouse cursors, horizontal cursive handwriting reveals (clip-path), and floating CSS hover states.
+- **Strict Responsiveness:** Flawless cross-device rendering (Mobile to 4K Ultrawide) heavily prioritizing CSS Grids, Flex-cols, and hard horizontal overflow protections.
+- **Interactive Easter Egg:** A custom isolated game-loop module built into the React tree entirely for technical demonstration.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧰 Technology Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **React.js** (Core Framework & State Management Contexts)
+* **TailwindCSS** (Utility classes & absolute positional layouts)
+* **Framer Motion** (Spring animations, structural renders, and DOM element staggering)
+* **Lenis Smooth Scroll** (Fluid mathematical scroll friction)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Running Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you are a direct collaborator or evaluating my code, you can run this ecosystem locally in seconds:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/luccalck/portfolio.git
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
+   ```bash
+   cd portfolio 
+   npm install
+   ```
 
-## Learn More
+3. **Spin up the local server:**
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*(This application was configured using modern ECMAScript standards and the standard robust React node ecosystem. Node version 18+ is recommended).*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚖️ Legal & Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**© 2026 Lucca Castilho. All Rights Reserved.**
 
-### Analyzing the Bundle Size
+This repository is strictly public for **demonstrational and recruitment purposes**. 
+The commercial and non-commercial copying, modification, or deployment of this personalized UI and codebase is explicitly prohibited as delineated within the [LICENSE](./LICENSE) file. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to inspect the code to view my structural patterns and engineering capacities!
