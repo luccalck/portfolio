@@ -114,7 +114,6 @@ const Projects = () => {
   const accent   = darkMode ? "#4d94ff" : "#1a56db";
   const cardBg   = darkMode ? "#111317" : "#ffffff";
   const cardBdr  = darkMode ? "#1e2530" : "#d0d7de";
-  const btnClr   = darkMode ? "#8b949e" : "#57606a";
 
   return (
     <div id="projects" style={{ backgroundColor: bg, transition: "background-color 0.35s ease" }}>

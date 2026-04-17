@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { motion, useSpring, useMotionValue } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { ThemeContext } from "../themeProvider";
 
 const CustomCursor = () => {
