@@ -10,7 +10,7 @@ const About = () => {
   const darkMode = state.darkMode;
   const { t } = useLanguage();
 
-  const bg        = darkMode ? "#0d1117" : "#f4f6f8";
+  const bg        = "transparent";
   const textMain  = darkMode ? "#FFFFFF" : "#0d1117";
   const textMuted = darkMode ? "#e2e8f0" : "#57606a";
   const accent    = darkMode ? "#4d94ff" : "#1a56db";

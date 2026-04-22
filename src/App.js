@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import Lenis from "lenis";
 import Hero from "./components/Hero";
 import About from "./views/About";
@@ -9,7 +9,7 @@ import Contact from "./views/Contact";
 import LoadingScreen from "./components/LoadingScreen";
 import Particles from "./components/Particles";
 import CustomCursor from "./components/CustomCursor";
-import { ThemeProvider } from "./themeProvider";
+import { ThemeProvider, ThemeContext } from "./themeProvider";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
@@ -36,10 +36,17 @@ function App() {
     return () => { cancelAnimationFrame(rafId); lenis.destroy(); };
   }, [loading]);
 
+  const { state } = useContext(ThemeContext);
+  const darkMode = state?.darkMode;
+
+  useEffect(() => {
+    document.body.style.backgroundColor = darkMode ? "#080808" : "#f4f6f8";
+    document.body.style.transition = "background-color 0.35s ease";
+  }, [darkMode]);
+
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <CustomCursor />
+    <LanguageProvider>
+      <CustomCursor />
         {!loading ? (
           <>
             {/* Star particles — fixed, behind everything */}
@@ -56,9 +63,16 @@ function App() {
         ) : (
           <LoadingScreen />
         )}
-      </LanguageProvider>
+    </LanguageProvider>
+  );
+}
+
+function Root() {
+  return (
+    <ThemeProvider>
+      <App />
     </ThemeProvider>
   );
 }
 
-export default App;
+export default Root;

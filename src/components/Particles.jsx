@@ -18,22 +18,27 @@ const Particles = () => {
     };
     resize();
 
-    // Create a beautiful universe starfield
-    const count = Math.floor((canvas.width * canvas.height) / 8000);
-    const stars = Array.from({ length: Math.min(count, 350) }, () => {
-      const r = Math.random();
-      return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        // Varied sizes: mostly tiny points, some larger "main" stars
-        size: r > 0.9 ? Math.random() * 1.5 + 1 : Math.random() * 0.8 + 0.2,
-        baseOpacity: Math.random() * 0.6 + 0.2,
-        twinkleSpeed: Math.random() * 0.02 + 0.005,
-        twinkleOffset: Math.random() * Math.PI * 2,
-        // Color variation: white, slightly blue, or slightly warm
-        color: r > 0.8 ? "200, 220, 255" : r > 0.6 ? "255, 240, 220" : "255, 255, 255",
-        hasGlow: r > 0.92, // Only the biggest stars have a bloom effect
-      };
+    // Create a high-end starfield with different depths (parallax-like layers)
+    const starLayers = [
+      { count: 180, sizeRange: [0.1, 0.4], speed: 0.015, color: "255, 255, 255" }, // Far, tiny stars
+      { count: 80, sizeRange: [0.4, 0.8], speed: 0.025, color: "200, 230, 255" },  // Mid, slightly blue
+      { count: 30, sizeRange: [0.8, 1.2], speed: 0.035, color: "255, 255, 255" },  // Near, bright stars
+    ];
+
+    const stars = [];
+    starLayers.forEach(layer => {
+      for (let i = 0; i < layer.count; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * (layer.sizeRange[1] - layer.sizeRange[0]) + layer.sizeRange[0],
+          baseOpacity: Math.random() * 0.5 + 0.3,
+          twinkleSpeed: Math.random() * layer.speed + 0.005,
+          twinkleOffset: Math.random() * Math.PI * 2,
+          color: layer.color,
+          pulse: Math.random() > 0.8, // Some stars pulse more visibly
+        });
+      }
     });
 
     let frame = 0;
@@ -43,14 +48,18 @@ const Particles = () => {
       frame++;
 
       stars.forEach((s) => {
+        // High-end twinkling using sine wave for opacity
         const twinkle = Math.sin(frame * s.twinkleSpeed + s.twinkleOffset);
-        const opacity = s.baseOpacity + twinkle * (s.baseOpacity * 0.5);
+        let opacity = s.baseOpacity + twinkle * (s.pulse ? 0.4 : 0.2);
+        
+        // Ensure stars don't disappear completely
         const currentOpacity = Math.max(0.1, opacity);
 
+        // Draw the star (strictly pointed dots for universe feel)
         ctx.beginPath();
-        
-        if (s.hasGlow && darkMode) {
-          ctx.shadowBlur = s.size * 6;
+        // Subtle glow for the bright ones
+        if (s.size > 0.8 && darkMode) {
+          ctx.shadowBlur = s.size * 3;
           ctx.shadowColor = `rgba(${s.color}, ${currentOpacity})`;
         } else {
           ctx.shadowBlur = 0;
@@ -58,8 +67,9 @@ const Particles = () => {
 
         ctx.fillStyle = darkMode 
           ? `rgba(${s.color}, ${currentOpacity})`
-          : `rgba(10, 20, 50, ${currentOpacity * 0.4})`;
-          
+          : `rgba(20, 30, 60, ${currentOpacity * 0.2})`; // Dimmer in light mode
+
+        // Using small rectangles/arcs for crispness
         ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
         ctx.fill();
       });
@@ -73,11 +83,13 @@ const Particles = () => {
     const handleResize = () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
+        const oldW = canvas.width;
+        const oldH = canvas.height;
         resize();
-        // Reposition stars that would be off-screen
+        // Redistribute stars naturally on resize
         stars.forEach(s => {
-          if (s.x > canvas.width) s.x = Math.random() * canvas.width;
-          if (s.y > canvas.height) s.y = Math.random() * canvas.height;
+          s.x = (s.x / oldW) * canvas.width;
+          s.y = (s.y / oldH) * canvas.height;
         });
       }, 150);
     };
@@ -99,9 +111,9 @@ const Particles = () => {
         top: 0,
         left: 0,
         width: "100vw",
-        height: "100vh",
+        height: "110vh", // Slight overlap to avoid edges
         pointerEvents: "none",
-        zIndex: 0, // Behind content but in front of background color
+        zIndex: 0, 
       }}
     />
   );
