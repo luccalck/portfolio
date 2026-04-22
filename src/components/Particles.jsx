@@ -5,6 +5,7 @@ const Particles = () => {
   const canvasRef = useRef(null);
   const { state } = useContext(ThemeContext);
   const darkMode = state.darkMode;
+  const scrollY = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -18,11 +19,11 @@ const Particles = () => {
     };
     resize();
 
-    // Create a high-end starfield with different depths (parallax-like layers)
+    // Layers: [count, sizeRange, twinkleSpeed, parallaxFactor, color]
     const starLayers = [
-      { count: 180, sizeRange: [0.1, 0.4], speed: 0.015, color: "255, 255, 255" }, // Far, tiny stars
-      { count: 80, sizeRange: [0.4, 0.8], speed: 0.025, color: "200, 230, 255" },  // Mid, slightly blue
-      { count: 30, sizeRange: [0.8, 1.2], speed: 0.035, color: "255, 255, 255" },  // Near, bright stars
+      { count: 180, sizeRange: [0.1, 0.4], speed: 0.012, parallax: 0.05, drift: 0.05, color: "255, 255, 255" }, 
+      { count: 80,  sizeRange: [0.4, 0.8], speed: 0.020, parallax: 0.12, drift: 0.10, color: "200, 230, 255" }, 
+      { count: 30,  sizeRange: [0.8, 1.2], speed: 0.030, parallax: 0.25, drift: 0.15, color: "255, 255, 255" }, 
     ];
 
     const stars = [];
@@ -35,11 +36,19 @@ const Particles = () => {
           baseOpacity: Math.random() * 0.5 + 0.3,
           twinkleSpeed: Math.random() * layer.speed + 0.005,
           twinkleOffset: Math.random() * Math.PI * 2,
+          parallax: layer.parallax,
+          driftX: (Math.random() - 0.5) * layer.drift, // Random drift direction
+          driftY: layer.drift * 0.5, // Constant slow downward drift
           color: layer.color,
-          pulse: Math.random() > 0.8, // Some stars pulse more visibly
+          pulse: Math.random() > 0.85,
         });
       }
     });
+
+    const handleScroll = () => {
+      scrollY.current = window.scrollY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     let frame = 0;
 
@@ -48,16 +57,26 @@ const Particles = () => {
       frame++;
 
       stars.forEach((s) => {
-        // High-end twinkling using sine wave for opacity
+        // Continuous smooth drift movement
+        s.x += s.driftX;
+        s.y += s.driftY;
+
+        // Wrap around screen after drift
+        if (s.x < 0) s.x = canvas.width;
+        if (s.x > canvas.width) s.x = 0;
+        if (s.y < 0) s.y = canvas.height;
+        if (s.y > canvas.height) s.y = 0;
+
+        // Add scroll parallax: stars shift based on their layer depth
+        const parallaxY = scrollY.current * s.parallax;
+        let drawY = (s.y - parallaxY) % canvas.height;
+        if (drawY < 0) drawY += canvas.height;
+
         const twinkle = Math.sin(frame * s.twinkleSpeed + s.twinkleOffset);
         let opacity = s.baseOpacity + twinkle * (s.pulse ? 0.4 : 0.2);
-        
-        // Ensure stars don't disappear completely
         const currentOpacity = Math.max(0.1, opacity);
 
-        // Draw the star (strictly pointed dots for universe feel)
         ctx.beginPath();
-        // Subtle glow for the bright ones
         if (s.size > 0.8 && darkMode) {
           ctx.shadowBlur = s.size * 3;
           ctx.shadowColor = `rgba(${s.color}, ${currentOpacity})`;
@@ -67,10 +86,9 @@ const Particles = () => {
 
         ctx.fillStyle = darkMode 
           ? `rgba(${s.color}, ${currentOpacity})`
-          : `rgba(20, 30, 60, ${currentOpacity * 0.2})`; // Dimmer in light mode
+          : `rgba(20, 30, 60, ${currentOpacity * 0.2})`;
 
-        // Using small rectangles/arcs for crispness
-        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.arc(s.x, drawY, s.size, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -83,13 +101,10 @@ const Particles = () => {
     const handleResize = () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        const oldW = canvas.width;
-        const oldH = canvas.height;
         resize();
-        // Redistribute stars naturally on resize
         stars.forEach(s => {
-          s.x = (s.x / oldW) * canvas.width;
-          s.y = (s.y / oldH) * canvas.height;
+          s.x = Math.random() * canvas.width;
+          s.y = Math.random() * canvas.height;
         });
       }, 150);
     };
@@ -99,6 +114,7 @@ const Particles = () => {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
       clearTimeout(resizeTimer);
     };
   }, [darkMode]);
@@ -111,7 +127,7 @@ const Particles = () => {
         top: 0,
         left: 0,
         width: "100vw",
-        height: "110vh", // Slight overlap to avoid edges
+        height: "100vh",
         pointerEvents: "none",
         zIndex: 0, 
       }}
