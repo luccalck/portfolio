@@ -14,46 +14,53 @@ const Particles = () => {
 
     const resize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.height = window.innerHeight;
     };
     resize();
 
-    // Generate falling particles — varied sizes & falling speeds
-    const count = Math.floor((canvas.width * canvas.height) / 12000);
-    const particles = Array.from({ length: Math.min(count, 180) }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.4 + 0.3,
-      baseOpacity: Math.random() * 0.35 + 0.05,
-      twinkleSpeed: Math.random() * 0.008 + 0.002,
-      twinkleOffset: Math.random() * Math.PI * 2,
-      speedY: Math.random() * 0.3 + 0.1, // Fall speed downwards
-    }));
+    // Create a beautiful universe starfield
+    const count = Math.floor((canvas.width * canvas.height) / 8000);
+    const stars = Array.from({ length: Math.min(count, 350) }, () => {
+      const r = Math.random();
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        // Varied sizes: mostly tiny points, some larger "main" stars
+        size: r > 0.9 ? Math.random() * 1.5 + 1 : Math.random() * 0.8 + 0.2,
+        baseOpacity: Math.random() * 0.6 + 0.2,
+        twinkleSpeed: Math.random() * 0.02 + 0.005,
+        twinkleOffset: Math.random() * Math.PI * 2,
+        // Color variation: white, slightly blue, or slightly warm
+        color: r > 0.8 ? "200, 220, 255" : r > 0.6 ? "255, 240, 220" : "255, 255, 255",
+        hasGlow: r > 0.92, // Only the biggest stars have a bloom effect
+      };
+    });
 
     let frame = 0;
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const color = darkMode ? "255,255,255" : "15,30,80";
       frame++;
 
-      particles.forEach((p) => {
-        // Move particle down
-        p.y += p.speedY;
-
-        // If it goes past the bottom of the document, wrap to the top
-        if (p.y > canvas.height) {
-          p.y = 0;
-          p.x = Math.random() * canvas.width;
-        }
-
-        // Subtle twinkle: opacity oscillates gently
-        const twinkle = Math.sin(frame * p.twinkleSpeed + p.twinkleOffset);
-        const opacity = p.baseOpacity + twinkle * (p.baseOpacity * 0.4);
+      stars.forEach((s) => {
+        const twinkle = Math.sin(frame * s.twinkleSpeed + s.twinkleOffset);
+        const opacity = s.baseOpacity + twinkle * (s.baseOpacity * 0.5);
+        const currentOpacity = Math.max(0.1, opacity);
 
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color},${Math.max(0.01, opacity)})`;
+        
+        if (s.hasGlow && darkMode) {
+          ctx.shadowBlur = s.size * 6;
+          ctx.shadowColor = `rgba(${s.color}, ${currentOpacity})`;
+        } else {
+          ctx.shadowBlur = 0;
+        }
+
+        ctx.fillStyle = darkMode 
+          ? `rgba(${s.color}, ${currentOpacity})`
+          : `rgba(10, 20, 50, ${currentOpacity * 0.4})`;
+          
+        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -62,12 +69,19 @@ const Particles = () => {
 
     draw();
 
-    // Small timeout on resize to let DOM settle layout height
     let resizeTimer;
     const handleResize = () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => resize(), 150);
+      resizeTimer = setTimeout(() => {
+        resize();
+        // Reposition stars that would be off-screen
+        stars.forEach(s => {
+          if (s.x > canvas.width) s.x = Math.random() * canvas.width;
+          if (s.y > canvas.height) s.y = Math.random() * canvas.height;
+        });
+      }, 150);
     };
+
     window.addEventListener("resize", handleResize, { passive: true });
 
     return () => {
@@ -84,10 +98,10 @@ const Particles = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
         pointerEvents: "none",
-        zIndex: 50,
+        zIndex: 0, // Behind content but in front of background color
       }}
     />
   );
