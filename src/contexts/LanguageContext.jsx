@@ -1,8 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
 import en from "../translations/en";
 import pt from "../translations/pt";
+import zh from "../translations/zh";
+import de from "../translations/de";
+import fr from "../translations/fr";
 
-const translations = { en, pt };
+const translations = { en, pt, zh, de, fr };
 
 export const LanguageContext = createContext();
 

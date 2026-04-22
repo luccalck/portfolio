@@ -196,13 +196,13 @@ const Hero = () => {
           >
             {/* Lang toggle */}
             <div className="float-glow" style={{ display: "flex", alignItems: "center", borderRadius: "14px", overflow: "hidden", border: `1px solid ${ctrlBdr}`, backgroundColor: ctrlBg }}>
-              {["en", "pt"].map((l) => (
+              {["en", "pt", "zh", "de", "fr"].map((l) => (
                 <button key={l} onClick={() => toggleLang(l)}
                   style={{
                     color: lang === l ? "#fff" : ctrlTxt,
                     backgroundColor: lang === l ? accent : "transparent",
                     cursor: "pointer", border: "none", outline: "none",
-                    padding: "8px 12px", fontSize: "11px", fontWeight: 700,
+                    padding: "8px 10px", fontSize: "10px", fontWeight: 700,
                     textTransform: "uppercase", transition: "all 0.2s",
                   }}
                 >{l.toUpperCase()}</button>
@@ -296,7 +296,7 @@ const Hero = () => {
           {/* CV button */}
           <motion.div variants={slideUp} style={{ marginTop: "2.25rem" }}>
             <a
-              href="/curriculo.pdf"
+              href={lang === "pt" ? "/Curriculobr.pdf" : "/Curriculoen.pdf"}
               target="_blank"
               rel="noreferrer"
               style={{

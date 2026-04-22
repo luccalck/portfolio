@@ -4,7 +4,7 @@ import { ThemeContext } from "../themeProvider";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { ScrollFade } from "../components/Hero";
-import PizzaEasterEgg from "../components/PizzaEasterEgg";
+
 
 const socialLabels = { GitHub: "GitHub", LinkedIn: "LinkedIn", Instagram: "Instagram" };
 
@@ -156,7 +156,7 @@ const Contact = () => {
           transition: "background-color 0.35s ease",
         }}
       >
-        <PizzaEasterEgg />
+
         © {new Date().getFullYear()} Lucca Castilho &nbsp;·&nbsp; {t.contact.footer}
       </div>
     </div>
