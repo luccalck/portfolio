@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ThemeContext } from "../themeProvider";
 import { useLanguage } from "../contexts/LanguageContext";
+import { contactLinks } from "../constants";
 
 /* ───────────────────────────────────────────────
    useCustomInView — native IntersectionObserver
