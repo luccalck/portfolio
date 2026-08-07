@@ -196,7 +196,7 @@ const Hero = () => {
           >
             {/* Lang toggle */}
             <div className="float-glow" style={{ display: "flex", alignItems: "center", borderRadius: "14px", overflow: "hidden", border: `1px solid ${ctrlBdr}`, backgroundColor: ctrlBg }}>
-              {["en", "pt", "zh", "de", "fr"].map((l) => (
+              {["en", "pt", "zh", "de", "fr", "ru"].map((l) => (
                 <button key={l} onClick={() => toggleLang(l)}
                   style={{
                     color: lang === l ? "#fff" : ctrlTxt,
