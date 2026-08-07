@@ -1,5 +1,5 @@
 const pt = {
-  nav: { home: "Início", about: "Sobre", services: "Serviços", projects: "Projetos", contact: "Contato" },
+  nav: { home: "Início", about: "Sobre", services: "Competências", projects: "Projetos", contact: "Contato" },
   home: {
     greeting: "Olá, sou o Lucca",
     roles: ["Estudante de Engenharia de Software", "Desenvolvedor Backend Python", "Engenheiro de APIs & Banco de Dados"],
@@ -7,13 +7,13 @@ const pt = {
     resume: "Currículo",
   },
   about: {
-    title: "Sobre Mim", subTitle: "Um pouco sobre mim",
+    title: "Sobre Mim", subTitle: "Trajetória & Foco Técnico",
     bio: "Sou estudante universitário cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas em paralelo, especializado em Engenharia Backend em Python. Construo serviços RESTful de alto desempenho utilizando Python, FastAPI, SQLAlchemy 2.0 e PostgreSQL conteinerizados em Docker. Focado em entregas de padrão enterprise, arquitetura limpa e pipelines de migração automatizados.",
     techTitle: "Tecnologias & Ferramentas",
     techDesc: "Especializado na stack de Backend em Python (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic e Pytest), mantendo suporte a tecnologias web modernas para integração fullstack.",
   },
   services: {
-    title: "Serviços", subTitle: "O Que Ofereço",
+    title: "Competências Técnicas", subTitle: "Capacidades de Engenharia",
     items: [
       { name: "Engenharia Backend", desc: "Projeto e implementação de APIs RESTful escaláveis em Python (FastAPI), SQLAlchemy 2.0 e PostgreSQL. Foco em arquitetura limpa, segurança JWT e código de alta manutenibilidade." },
       { name: "Arquitetura & Modelagem de Dados", desc: "Estruturação de schemas relacionais em PostgreSQL, otimização de queries SQL e automação de migrações de banco de dados com Alembic." },
@@ -33,7 +33,8 @@ const pt = {
     viewCert: "Ver Certificado", seeMore: "Ver mais no LinkedIn",
     items: [
       { name: "AWS Academy Graduate — Cloud Foundations", issuing: "AWS", description: "Treinamento fundamental abordando conceitos da Nuvem AWS, segurança, arquitetura e serviços principais.", link: "/certs/aws_cloud_foundations.pdf" },
-      { name: "Python para Dados: Primeiros Passos", issuing: "Alura", description: "Curso abrangente sobre os fundamentos e lógica em Python aplicados à análise e manipulação de dados.", link: "/certs/python_dados_alura.pdf" }
+      { name: "Python para Dados: Primeiros Passos", issuing: "Alura", description: "Curso abrangente sobre os fundamentos e lógica em Python aplicados à análise e manipulação de dados.", link: "/certs/python_dados_alura.pdf" },
+      { name: "Git e GitHub: Estratégias de Controle de Versão", issuing: "Alura / SENAI", description: "Capacitação técnica em fluxo de branches, convenções de commits, resolução de conflitos e automação.", link: "https://www.linkedin.com/in/luccacastilho1/" }
     ],
   },
   contact: {

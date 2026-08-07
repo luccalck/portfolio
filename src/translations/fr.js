@@ -1,5 +1,5 @@
 const fr = {
-  nav: { home: "Accueil", about: "À propos", services: "Services", projects: "Projets", contact: "Contact" },
+  nav: { home: "Accueil", about: "À propos", services: "Compétences", projects: "Projets", contact: "Contact" },
   home: {
     greeting: "Bonjour, je suis Lucca",
     roles: ["Étudiant en Génie Logiciel", "Développeur Backend Python", "Ingénieur API & Bases de Données"],
@@ -7,13 +7,13 @@ const fr = {
     resume: "Curriculum Vitae",
   },
   about: {
-    title: "À propos de moi", subTitle: "Un peu sur moi",
+    title: "À propos de moi", subTitle: "Parcours & Focus Technique",
     bio: "Je suis étudiant en Informatique spécialisé dans le développement Backend Python. Je conçois des APIs RESTful haute performance en utilisant Python, FastAPI, SQLAlchemy 2.0 et PostgreSQL conteneurisés avec Docker. Je me concentre sur l'architecture propre, les tests automatisés et les pipelines de migration.",
     techTitle: "Technologies & Outils",
     techDesc: "Spécialisé dans la stack Backend Python (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic et Pytest) tout en prenant en charge les technologies web modernes.",
   },
   services: {
-    title: "Services", subTitle: "Ce que je propose",
+    title: "Compétences Techniques", subTitle: "Capacités d'Ingénierie",
     items: [
       { name: "Ingénierie Backend", desc: "Conception et déploiement d'APIs RESTful évolutives avec Python (FastAPI), SQLAlchemy 2.0 et PostgreSQL. Focus sur l'architecture propre et la sécurité JWT." },
       { name: "Architecture & Modélisation de Données", desc: "Structuration de schémas relationnels dans PostgreSQL, optimisation de requêtes SQL et automatisation des migrations avec Alembic." },
@@ -33,7 +33,8 @@ const fr = {
     viewCert: "Voir le certificat", seeMore: "Voir plus sur LinkedIn",
     items: [
       { name: "AWS Academy Graduate — Cloud Foundations", issuing: "AWS", description: "Formation fondamentale sur les concepts du Cloud AWS, la sécurité, l'architecture et les services clés.", link: "/certs/aws_cloud_foundations.pdf" },
-      { name: "Python pour les Données: Premiers Pas", issuing: "Alura", description: "Cours d'introduction complet sur les principes fondamentaux de Python appliqués à l'analyse de données.", link: "/certs/python_dados_alura.pdf" }
+      { name: "Python pour les Données: Premiers Pas", issuing: "Alura", description: "Cours d'introduction complet sur les principes fondamentaux de Python appliqués à l'analyse de données.", link: "/certs/python_dados_alura.pdf" },
+      { name: "Git & GitHub: Stratégies de Contrôle de Version", issuing: "Alura / SENAI", description: "Compétence technique sur les flux de branches, conventions de commits et intégration CI.", link: "https://www.linkedin.com/in/luccacastilho1/" }
     ],
   },
   contact: {

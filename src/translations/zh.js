@@ -1,5 +1,5 @@
 const zh = {
-  nav: { home: "首页", about: "关于", services: "服务", projects: "项目", contact: "联系" },
+  nav: { home: "首页", about: "关于", services: "能力", projects: "项目", contact: "联系" },
   home: {
     greeting: "你好，我是 Lucca",
     roles: ["软件工程专业学生", "Python 后端开发者", "API 与数据库工程师"],
@@ -7,13 +7,13 @@ const zh = {
     resume: "个人简历",
   },
   about: {
-    title: "关于我", subTitle: "自我介绍",
+    title: "关于我", subTitle: "背景与技术焦点",
     bio: "我是一名攻读计算机科学与系统分析与开发学位的软件工程专业学生，专注于 Python 后端工程。我使用 Python, FastAPI, SQLAlchemy 2.0 和 PostgreSQL 构建高性能 RESTful API，并使用 Docker 进行容器化部署。我专注于企业级架构、整洁代码与自动化数据库迁移。",
     techTitle: "技术与工具",
     techDesc: "专注于 Python 后端技术栈 (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic, Pytest)，同时掌握现代前端技术以实现全栈集成。",
   },
   services: {
-    title: "服务", subTitle: "我提供的服务",
+    title: "技术能力", subTitle: "工程能力",
     items: [
       { name: "后端工程开发", desc: "使用 Python (FastAPI)、SQLAlchemy 2.0 和 PostgreSQL 设计并部署可扩展的 RESTful API，注重清晰架构与 JWT 安全。" },
       { name: "数据库架构与建模", desc: "在 PostgreSQL 中设计关系数据库模式，优化 SQL 查询，并使用 Alembic 实现自动化数据库迁移。" },
@@ -33,7 +33,8 @@ const zh = {
     viewCert: "查看证书", seeMore: "在 LinkedIn 查看更多",
     items: [
       { name: "AWS Academy Graduate — Cloud Foundations", issuing: "AWS", description: "AWS 云计算概念、安全、架构和核心服务的基础培训。", link: "/certs/aws_cloud_foundations.pdf" },
-      { name: "Python 数据分析入门", issuing: "Alura", description: "应用于数据分析与处理的 Python 基础课程。", link: "/certs/python_dados_alura.pdf" }
+      { name: "Python 数据分析入门", issuing: "Alura", description: "应用于数据分析与处理的 Python 基础课程。", link: "/certs/python_dados_alura.pdf" },
+      { name: "Git 与 GitHub: 版本控制策略", issuing: "Alura / SENAI", description: "分支工作流、提交规范、冲突解决与 CI 集成技术培训。", link: "https://www.linkedin.com/in/luccacastilho1/" }
     ],
   },
   contact: {
