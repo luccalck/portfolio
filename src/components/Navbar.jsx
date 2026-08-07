@@ -140,11 +140,11 @@ const Navbar = () => {
                 backgroundColor: c.toggleBg,
               }}
             >
-              {["en", "pt", "ru"].map((l) => (
+              {["en", "pt", "zh", "de", "fr", "ru"].map((l) => (
                 <button
                   key={l}
                   onClick={() => toggleLang(l)}
-                  className="px-3 py-1.5 text-xs font-bold uppercase transition-all duration-200"
+                  className="px-2.5 py-1.5 text-xs font-bold uppercase transition-all duration-200"
                   style={{
                     color: lang === l ? "#fff" : c.toggleText,
                     backgroundColor: lang === l ? c.toggleActive : "transparent",
@@ -180,10 +180,10 @@ const Navbar = () => {
           <div className="flex md:hidden items-center gap-3">
             {/* Lang toggle mobile */}
             <div
-              className="flex items-center rounded-lg overflow-hidden"
+              className="flex items-center rounded-lg overflow-hidden flex-wrap"
               style={{ border: `1px solid ${c.toggleBorder}`, backgroundColor: c.toggleBg }}
             >
-              {["en", "pt", "ru"].map((l) => (
+              {["en", "pt", "zh", "de", "fr", "ru"].map((l) => (
                 <button
                   key={l}
                   onClick={() => toggleLang(l)}
