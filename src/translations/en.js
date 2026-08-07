@@ -2,30 +2,30 @@ const en = {
   nav: { home: "Home", about: "About", services: "Services", projects: "Projects", contact: "Contact" },
   home: {
     greeting: "Hi, I'm Lucca",
-    roles: ["Computer Science Student", "Full Stack Developer", "AI & Automation Enthusiast"],
-    bio: "Full Stack Developer focused on Python and AI-driven solutions, currently pursuing degrees in Computer Science and Systems Analysis & Development.",
+    roles: ["Software Engineering Student", "Python Backend Developer", "API & Database Engineer"],
+    bio: "Backend Developer focused on Python (FastAPI, PostgreSQL, and Docker), pursuing Computer Science and Systems Analysis & Development degrees.",
     resume: "Curriculum Vitae",
   },
   about: {
     title: "About Me", subTitle: "A bit about me",
-    bio: "I'm a Full Stack Developer and Computer Science student with a background in Systems Analysis & Development. I build user-focused web applications using modern stacks including React, Node.js, and Python with FastAPI. Passionate about AI and process automation, I enjoy turning complex problems into clean, efficient, and maintainable solutions — from the initial concept all the way to production.",
+    bio: "I am an undergraduate student pursuing Computer Science and Systems Analysis & Development in parallel, specializing in Python Backend Engineering. I build high-performance RESTful APIs using Python, FastAPI, SQLAlchemy 2.0, and PostgreSQL containerized with Docker. Focused on enterprise-grade delivery, clean architecture, and automated migration pipelines.",
     techTitle: "Technologies & Tools",
-    techDesc: "I work across the full stack — combining reliable back-end technologies with modern front-end frameworks to deliver performant, scalable applications.",
+    techDesc: "Specialized in the Python Backend stack (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic, and Pytest), while maintaining support for modern web technologies for fullstack integration.",
   },
   services: {
     title: "Services", subTitle: "What I Provide",
     items: [
-      { name: "Web Development", desc: "Building responsive, high-performance web applications from front-end interfaces to fully integrated full-stack solutions — with a focus on clean architecture and user experience." },
-      { name: "Backend Development", desc: "Designing and implementing RESTful APIs and server-side logic using Python (FastAPI) and Node.js — with an emphasis on scalability, security, and maintainable code." },
-      { name: "AI & Automation", desc: "Integrating AI-driven features and process automation into real-world applications — from intelligent data pipelines to LLM-powered tools that streamline workflows and reduce manual effort." },
+      { name: "Backend Engineering", desc: "Designing and deploying scalable RESTful APIs using Python (FastAPI), SQLAlchemy 2.0, and PostgreSQL. Focused on clean architecture, JWT security, and maintainable codebases." },
+      { name: "Database Architecture & Modeling", desc: "Structuring relational database schemas in PostgreSQL, writing optimized SQL queries, and implementing automated database migrations with Alembic." },
+      { name: "Containerization & DevOps", desc: "Containerizing microservices with Docker & Docker Compose, automating API test suites with Pytest, and configuring GitHub Actions CI/CD pipelines." },
     ],
   },
   projects: {
     title: "Projects", subTitle: "What I've Built",
     viewAll: "View all on GitHub", viewProject: "View on GitHub",
     items: [
-      { name: "E-Motors", description: "A web platform showcasing electric vehicles categorized by type — sport, scooter, and urban. Focused on clean UI design and an intuitive browsing experience." },
-      { name: "Vyzor — Management Platform", description: "A SaaS platform for integrated business management — featuring KPI dashboards, CRM/ERP integrations, and AI-driven process automation for data-heavy workflows." },
+      { name: "Vyzor", description: "Multi-tenant backend engine and SaaS data platform — built with FastAPI, SQLAlchemy 2.0, Alembic, JWT, Redis, and Docker." },
+      { name: "ScopeMaster", description: "Collaborative software requirements management platform (Capstone Project) — built with React 18, TypeScript, Supabase RLS, and TailwindCSS." },
     ],
   },
   certificates: {

@@ -2,30 +2,30 @@ const de = {
   nav: { home: "Startseite", about: "Über mich", services: "Leistungen", projects: "Projekte", contact: "Kontakt" },
   home: {
     greeting: "Hi, ich bin Lucca",
-    roles: ["Informatikstudent", "Full Stack Entwickler", "KI & Automatisierung Enthusiast"],
-    bio: "Full Stack Entwickler mit Fokus auf Python und KI-gesteuerte Lösungen. Ich studiere derzeit Informatik und Systemanalyse & Entwicklung.",
+    roles: ["Software Engineering Student", "Python Backend Entwickler", "API & Datenbank Ingenieur"],
+    bio: "Backend-Entwickler mit Fokus auf Python (FastAPI, PostgreSQL und Docker). Ich studiere derzeit Informatik und Systemanalyse & Entwicklung.",
     resume: "Lebenslauf",
   },
   about: {
     title: "Über mich", subTitle: "Ein wenig über mich",
-    bio: "Ich bin Full-Stack-Entwickler und Informatikstudent mit Hintergrund in Systemanalyse und -entwicklung. Ich erstelle benutzerorientierte Webanwendungen mit modernen Stacks wie React, Node.js und Python mit FastAPI. Ich begeistere mich für KI und Prozessautomatisierung und genieße es, komplexe Probleme in saubere, effiziente und wartbare Lösungen zu verwandeln – vom ersten Konzept bis hin zur Produktion.",
+    bio: "Ich bin Informatikstudent mit Spezialisierung auf Python Backend-Entwicklung. Ich erstelle hochleistungsfähige RESTful APIs mit Python, FastAPI, SQLAlchemy 2.0 und PostgreSQL, die in Docker containerisiert sind. Mein Fokus liegt auf Unternehmensarchitektur, sauberem Code und automatisierten Migrations-Pipelines.",
     techTitle: "Technologien & Tools",
-    techDesc: "Ich arbeite über den gesamten Stack hinweg – ich kombiniere zuverlässige Backend-Technologien mit modernen Frontend-Frameworks, um performante und skalierbare Anwendungen zu liefern.",
+    techDesc: "Spezialisiert auf den Python-Backend-Stack (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic und Pytest) mit Unterstützung für moderne Webtechnologien.",
   },
   services: {
     title: "Leistungen", subTitle: "Was ich anbiete",
     items: [
-      { name: "Webentwicklung", desc: "Erstellung reaktionsschneller Hochleistungs-Webanwendungen von Frontend-Schnittstellen bis hin zu vollständig integrierten Full-Stack-Lösungen – mit Fokus auf sauberer Architektur und Benutzererfahrung." },
-      { name: "Backend-Entwicklung", desc: "Design und Implementierung von RESTful APIs und serverseitiger Logik mit Python (FastAPI) und Node.js – mit Schwerpunkt auf Skalierbarkeit, Sicherheit und wartbarem Code." },
-      { name: "KI & Automatisierung", desc: "Integration von KI-gesteuerten Funktionen und Prozessautomatisierung in reale Anwendungen – von intelligenten Datenpipelines bis hin zu LLM-gestützten Tools, die Workflows rationalisieren und den manuellen Aufwand reduzieren." },
+      { name: "Backend Engineering", desc: "Design und Implementierung skalierbarer RESTful APIs mit Python (FastAPI), SQLAlchemy 2.0 und PostgreSQL. Fokus auf sauberer Architektur und JWT-Sicherheit." },
+      { name: "Datenbankarchitektur & Modellierung", desc: "Strukturierung relationaler Datenbankschemata in PostgreSQL, Optimierung von SQL-Abfragen und Automatisierung von Migrationen mit Alembic." },
+      { name: "Containerisierung & DevOps", desc: "Containerisierung von Microservices mit Docker & Docker Compose, Testautomatisierung mit Pytest und CI/CD-Pipelines via GitHub Actions." },
     ],
   },
   projects: {
     title: "Projekte", subTitle: "Was ich gebaut habe",
     viewAll: "Alle auf GitHub ansehen", viewProject: "Auf GitHub ansehen",
     items: [
-      { name: "E-Motors", description: "Eine Webplattform, die Elektrofahrzeuge nach Typ kategorisiert (Sport, Roller, Urban) präsentiert. Fokus auf sauberem UI-Design und einem intuitiven Surferlebnis." },
-      { name: "Vyzor — Management-Plattform", description: "Eine SaaS-Plattform für integriertes Geschäftsmanagement – mit KPI-Dashboards, CRM/ERP-Integrationen und KI-gesteuerter Prozessautomatisierung für datenintensive Workflows." },
+      { name: "Vyzor", description: "Multi-Tenant-Backend-Engine und SaaS-Datenplattform – entwickelt mit FastAPI, SQLAlchemy 2.0, Alembic, JWT, Redis und Docker." },
+      { name: "ScopeMaster", description: "Kollaborative Plattform für Software-Anforderungsmanagement (Abschlussprojekt) – entwickelt mit React 18, TypeScript, Supabase RLS und TailwindCSS." },
     ],
   },
   certificates: {

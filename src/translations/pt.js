@@ -2,30 +2,30 @@ const pt = {
   nav: { home: "Início", about: "Sobre", services: "Serviços", projects: "Projetos", contact: "Contato" },
   home: {
     greeting: "Olá, sou o Lucca",
-    roles: ["Estudante de Ciência da Computação", "Desenvolvedor Full Stack", "Entusiasta de IA & Automação"],
-    bio: "Desenvolvedor Full Stack focado em Python e soluções com IA, cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas.",
+    roles: ["Estudante de Engenharia de Software", "Desenvolvedor Backend Python", "Engenheiro de APIs & Banco de Dados"],
+    bio: "Desenvolvedor Backend focado em Python (FastAPI, PostgreSQL e Docker), cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas.",
     resume: "Currículo",
   },
   about: {
     title: "Sobre Mim", subTitle: "Um pouco sobre mim",
-    bio: "Sou um Desenvolvedor Full Stack e estudante de Ciência da Computação com experiência em Análise e Desenvolvimento de Sistemas. Construo aplicações web focadas no usuário usando stacks modernas como React, Node.js e Python com FastAPI. Apaixonado por IA e automação de processos, gosto de transformar problemas complexos em soluções limpas, eficientes e de fácil manutenção — do conceito inicial até a produção.",
+    bio: "Sou estudante universitário cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas em paralelo, especializado em Engenharia Backend em Python. Construo serviços RESTful de alto desempenho utilizando Python, FastAPI, SQLAlchemy 2.0 e PostgreSQL conteinerizados em Docker. Focado em entregas de padrão enterprise, arquitetura limpa e pipelines de migração automatizados.",
     techTitle: "Tecnologias & Ferramentas",
-    techDesc: "Trabalho em toda a stack — combinando tecnologias back-end confiáveis com frameworks front-end modernos para entregar aplicações performáticas e escaláveis.",
+    techDesc: "Especializado na stack de Backend em Python (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic e Pytest), mantendo suporte a tecnologias web modernas para integração fullstack.",
   },
   services: {
     title: "Serviços", subTitle: "O Que Ofereço",
     items: [
-      { name: "Desenvolvimento Web", desc: "Criação de aplicações web responsivas e de alta performance — do front-end a soluções full-stack completas, com foco em arquitetura limpa e experiência do usuário." },
-      { name: "Desenvolvimento Back-End", desc: "Projeto e implementação de APIs RESTful e lógica server-side com Python (FastAPI) e Node.js — com ênfase em escalabilidade, segurança e código manutenível." },
-      { name: "IA & Automação", desc: "Integração de funcionalidades baseadas em IA e automação de processos em aplicações reais — de pipelines de dados inteligentes a ferramentas com LLMs que otimizam fluxos de trabalho." },
+      { name: "Engenharia Backend", desc: "Projeto e implementação de APIs RESTful escaláveis em Python (FastAPI), SQLAlchemy 2.0 e PostgreSQL. Foco em arquitetura limpa, segurança JWT e código de alta manutenibilidade." },
+      { name: "Arquitetura & Modelagem de Dados", desc: "Estruturação de schemas relacionais em PostgreSQL, otimização de queries SQL e automação de migrações de banco de dados com Alembic." },
+      { name: "Conteinerização & DevOps", desc: "Conteinerização de microserviços com Docker e Docker Compose, automação de testes com Pytest e integração contínua via GitHub Actions." },
     ],
   },
   projects: {
     title: "Projetos", subTitle: "O Que Construí",
     viewAll: "Ver todos no GitHub", viewProject: "Ver no GitHub",
     items: [
-      { name: "E-Motors", description: "Plataforma web que exibe veículos elétricos categorizados por tipo — esportivo, scooter e urbano. Focada em design limpo e navegação intuitiva." },
-      { name: "Vyzor — Plataforma de Gestão", description: "Plataforma SaaS para gestão empresarial integrada — com dashboards de KPIs, integrações CRM/ERP e automação de processos por IA para fluxos de trabalho intensos em dados." },
+      { name: "Vyzor", description: "Motor backend e plataforma SaaS multi-tenant para gestão de dados empresariais — desenvolvido com FastAPI, SQLAlchemy 2.0, Alembic, JWT, Redis e Docker." },
+      { name: "ScopeMaster", description: "Plataforma colaborativa para gestão de requisitos de software (Projeto Integrador ADS) — desenvolvida com React 18, TypeScript, Supabase RLS e TailwindCSS." },
     ],
   },
   certificates: {

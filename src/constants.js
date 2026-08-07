@@ -1,19 +1,18 @@
 export const techStack = [
-  { name: "HTML",       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-  { name: "CSS",        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" },
-  { name: "JavaScript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
   { name: "Python",     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "C#",         link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
-  { name: "React",      link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
-  { name: "Node.js",    link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" },
   { name: "FastAPI",    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
   { name: "PostgreSQL", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-  { name: "MySQL",      link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" },
+  { name: "Docker",     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "SQLAlchemy", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" },
   { name: "Git",        link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" },
+  { name: "TypeScript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "React",      link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" },
   { name: "Tailwind",   link: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+  { name: "JavaScript", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "HTML5",      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3",       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" },
 ]
 
-// SVG strings for official brand icons (white fill for dark backgrounds)
 export const contactLinks = [
   {
     name: "GitHub",
@@ -40,18 +39,18 @@ export const contactLinks = [
 
 export const serviceData = [
   {
-    name: 'Web Development',
-    desc: 'Building responsive, high-performance web applications from front-end interfaces to fully integrated full-stack solutions — with a focus on clean architecture and user experience.',
-    img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
-  },
-  {
-    name: 'Backend Development',
-    desc: 'Designing and implementing RESTful APIs and server-side logic using Python (FastAPI) and Node.js — with an emphasis on scalability, security, and maintainable code.',
+    name: 'Backend Engineering',
+    desc: 'Designing and deploying scalable RESTful APIs using Python (FastAPI), SQLAlchemy 2.0, and PostgreSQL. Focused on clean architecture, JWT security, and maintainable codebases.',
     img: "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png"
   },
   {
-    name: 'AI & Automation',
-    desc: 'Integrating AI-driven features and process automation into real-world applications — from intelligent data pipelines to LLM-powered tools that streamline workflows and reduce manual effort.',
+    name: 'Database Architecture & Modeling',
+    desc: 'Structuring relational database schemas in PostgreSQL, writing complex SQL queries, and implementing automated database migrations with Alembic.',
+    img: "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png"
+  },
+  {
+    name: 'Containerization & DevOps',
+    desc: 'Containerizing backend services with Docker & Docker Compose, setting up GitHub Actions CI/CD pipelines, and ensuring seamless deployment lifecycle.',
     img: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-artificial-intelligence-future-technology-flaticons-lineal-color-flat-icons.png"
   },
 ]

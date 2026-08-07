@@ -7,21 +7,7 @@ import { ScrollFade } from "../components/Hero";
 // Abstract digital gradients — no real photos
 const projectVisuals = [
   {
-    // E-Motors: electric blue grid — electric vehicle feel
-    gradient: "linear-gradient(135deg, #0a1628 0%, #0d1b35 55%, #0a2040 100%)",
-    gridColor: "rgba(77,148,255,0.07)",
-    accentLine: "#4d94ff",
-    icon: (
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" strokeWidth="1.2" strokeLinecap="round" opacity="0.6">
-        <rect x="1" y="6" width="22" height="13" rx="2"/><path d="M5 6V4a1 1 0 011-1h3a1 1 0 011 1v2"/><path d="M14 6V4a1 1 0 011-1h3a1 1 0 011 1v2"/>
-        <line x1="12" y1="9" x2="12" y2="16"/><line x1="8.5" y1="12.5" x2="15.5" y2="12.5"/>
-      </svg>
-    ),
-    tech: "HTML · CSS · JavaScript",
-    link: "https://github.com/luccalck/e-motors",
-  },
-  {
-    // Vyzor SaaS: dark teal dashboard — data/AI feel
+    // Vyzor: dark teal dashboard — backend engine feel
     gradient: "linear-gradient(135deg, #060d12 0%, #081820 55%, #0a2030 100%)",
     gridColor: "rgba(0,180,216,0.07)",
     accentLine: "#00b4d8",
@@ -33,8 +19,22 @@ const projectVisuals = [
         <circle cx="18" cy="8" r="1.5" fill="#00b4d8" stroke="none"/>
       </svg>
     ),
-    tech: "Python · FastAPI · PostgreSQL · SQLAlchemy · JavaScript",
-    link: "https://github.com/luccalck/vyzor-saas",
+    tech: "Python · FastAPI · PostgreSQL · SQLAlchemy · Docker",
+    link: "https://github.com/luccalck/vyzor",
+  },
+  {
+    // ScopeMaster: electric blue grid — software requirements platform feel
+    gradient: "linear-gradient(135deg, #0a1628 0%, #0d1b35 55%, #0a2040 100%)",
+    gridColor: "rgba(77,148,255,0.07)",
+    accentLine: "#4d94ff",
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4d94ff" strokeWidth="1.2" strokeLinecap="round" opacity="0.6">
+        <rect x="1" y="6" width="22" height="13" rx="2"/><path d="M5 6V4a1 1 0 011-1h3a1 1 0 011 1v2"/><path d="M14 6V4a1 1 0 011-1h3a1 1 0 011 1v2"/>
+        <line x1="12" y1="9" x2="12" y2="16"/><line x1="8.5" y1="12.5" x2="15.5" y2="12.5"/>
+      </svg>
+    ),
+    tech: "React 18 · TypeScript · Supabase RLS · TailwindCSS",
+    link: "https://github.com/luccalck/scope-master",
   },
 ];
 
