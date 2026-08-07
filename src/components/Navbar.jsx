@@ -140,7 +140,7 @@ const Navbar = () => {
                 backgroundColor: c.toggleBg,
               }}
             >
-              {["en", "pt"].map((l) => (
+              {["en", "pt", "ru"].map((l) => (
                 <button
                   key={l}
                   onClick={() => toggleLang(l)}
@@ -153,7 +153,7 @@ const Navbar = () => {
                     outline: "none",
                   }}
                 >
-                  {l === "en" ? "EN" : "PT"}
+                  {l.toUpperCase()}
                 </button>
               ))}
             </div>
@@ -183,7 +183,7 @@ const Navbar = () => {
               className="flex items-center rounded-lg overflow-hidden"
               style={{ border: `1px solid ${c.toggleBorder}`, backgroundColor: c.toggleBg }}
             >
-              {["en", "pt"].map((l) => (
+              {["en", "pt", "ru"].map((l) => (
                 <button
                   key={l}
                   onClick={() => toggleLang(l)}
@@ -196,7 +196,7 @@ const Navbar = () => {
                     outline: "none",
                   }}
                 >
-                  {l === "en" ? "EN" : "PT"}
+                  {l.toUpperCase()}
                 </button>
               ))}
             </div>

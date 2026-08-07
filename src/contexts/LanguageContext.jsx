@@ -4,8 +4,9 @@ import pt from "../translations/pt";
 import zh from "../translations/zh";
 import de from "../translations/de";
 import fr from "../translations/fr";
+import ru from "../translations/ru";
 
-const translations = { en, pt, zh, de, fr };
+const translations = { en, pt, zh, de, fr, ru };
 
 export const LanguageContext = createContext();
 

@@ -8,7 +8,7 @@ const en = {
   },
   about: {
     title: "About Me", subTitle: "Background & Technical Focus",
-    bio: "I am an undergraduate student pursuing Computer Science and Systems Analysis & Development in parallel, specializing in Python Backend Engineering. I build high-performance RESTful APIs using Python, FastAPI, SQLAlchemy 2.0, and PostgreSQL containerized with Docker. Focused on enterprise-grade delivery, clean architecture, and automated migration pipelines.",
+    bio: "I am an undergraduate student pursuing Computer Science and Systems Analysis & Development in parallel, specializing in Python Backend Engineering. I build high-performance RESTful APIs using Python, FastAPI, SQLAlchemy 2.0, and PostgreSQL containerized with Docker. Focused on enterprise-grade delivery, clean architecture, system resilience, and building robust backend infrastructure that solves real-world business problems.",
     techTitle: "Technologies & Tools",
     techDesc: "Specialized in the Python Backend stack (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic, and Pytest), while maintaining support for modern web technologies for fullstack integration.",
   },

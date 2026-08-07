@@ -8,7 +8,7 @@ const pt = {
   },
   about: {
     title: "Sobre Mim", subTitle: "Trajetória & Foco Técnico",
-    bio: "Sou estudante universitário cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas em paralelo, especializado em Engenharia Backend em Python. Construo serviços RESTful de alto desempenho utilizando Python, FastAPI, SQLAlchemy 2.0 e PostgreSQL conteinerizados em Docker. Focado em entregas de padrão enterprise, arquitetura limpa e pipelines de migração automatizados.",
+    bio: "Sou estudante universitário cursando Ciência da Computação e Análise e Desenvolvimento de Sistemas em paralelo, especializado em Engenharia Backend em Python. Construo serviços RESTful de alto desempenho utilizando Python, FastAPI, SQLAlchemy 2.0 e PostgreSQL conteinerizados em Docker. Focado em entregas de padrão enterprise, arquitetura limpa, resiliência e na construção de infraestruturas backend robustas que resolvem problemas reais de negócio.",
     techTitle: "Tecnologias & Ferramentas",
     techDesc: "Especializado na stack de Backend em Python (FastAPI, PostgreSQL, Docker, SQLAlchemy, Alembic e Pytest), mantendo suporte a tecnologias web modernas para integração fullstack.",
   },
