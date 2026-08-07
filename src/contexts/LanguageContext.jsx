@@ -11,10 +11,25 @@ const translations = { en, pt, zh, de, fr, ru };
 export const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(() => {
+    try {
+      const saved = localStorage.getItem("portfolio_lang");
+      return saved && translations[saved] ? saved : "en";
+    } catch {
+      return "en";
+    }
+  });
 
-  const t = translations[lang];
-  const toggleLang = (newLang) => setLang(newLang);
+  const t = translations[lang] || en;
+
+  const toggleLang = (newLang) => {
+    if (translations[newLang]) {
+      setLang(newLang);
+      try {
+        localStorage.setItem("portfolio_lang", newLang);
+      } catch {}
+    }
+  };
 
   return (
     <LanguageContext.Provider value={{ lang, t, toggleLang }}>
@@ -23,5 +38,4 @@ export function LanguageProvider({ children }) {
   );
 }
 
-// Convenience hook
 export const useLanguage = () => useContext(LanguageContext);
