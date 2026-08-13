@@ -296,7 +296,11 @@ const Hero = () => {
           {/* CV button */}
           <motion.div variants={slideUp} style={{ marginTop: "2.25rem" }}>
             <a
-              href={lang === "pt" ? "/cvbr.pdf" : "/cv.pdf"}
+              href={
+                lang === "pt"
+                  ? "/resumes/lucca-castilho-curriculo-backend.pdf"
+                  : "/resumes/lucca-castilho-backend-resume.pdf"
+              }
               target="_blank"
               rel="noreferrer"
               style={{
