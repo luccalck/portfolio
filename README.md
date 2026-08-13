@@ -1,70 +1,96 @@
 <div align="center">
-  <h1>Lucca Castilho | Professional Portfolio</h1>
-  <p>
-    <strong>A high-end, dynamic, and fully responsive digital showcase of engineering career, technical credentials, and active projects.</strong>
-  </p>
+
+# Lucca Castilho | Personal Portfolio
+
+### Responsive and multilingual presentation of my education, technical background, and software projects
+
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-luccacc.vercel.app/)
+[![React](https://img.shields.io/badge/React-17-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+
 </div>
-
-<br />
-
-## Overview
-
-This repository houses the source code for my professional portfolio. Engineered with modern UI/UX principles, the architecture entirely revolves around fluid interactions, dark/light thematic dualities, and highly optimized responsive breakpoints.
-
-The interface leverages Glassmorphism, custom native CSS lighting (radial glows), and intricate scroll-fade mechanics powered by Framer Motion. 
-
-*(Note: Live deployment link will be available soon via Vercel).*
 
 ---
 
-## Core Architecture & Features
+## Overview
 
-- **Dark/Light Mode Ecosystem:** A custom Context API state that globally shifts palettes, card borders, and neon-accents without flashing.
-- **i18n Translation Engine:** Dynamic English (EN) and Portuguese (PT) context mapping, allowing instantaneous locale changes.
-- **Advanced Micro-Interactions:** Custom magnetic mouse cursors, horizontal cursive handwriting reveals (clip-path), and floating CSS hover states.
-- **Strict Responsiveness:** Flawless cross-device rendering (Mobile to 4K Ultrawide) heavily prioritizing CSS Grids, Flex-cols, and hard horizontal overflow protections.
-- **Interactive Easter Egg:** A custom isolated game-loop module built into the React tree entirely for technical demonstration.
+This repository contains the source code for my personal portfolio. The interface presents my academic background, technical focus, certificates, software projects, curriculum, and contact channels in a responsive single-page experience.
+
+The application combines **React**, Context API, Framer Motion, Lenis, custom CSS, and Tailwind utilities to provide theme switching, animated transitions, smooth navigation, and multilingual content.
+
+**Live site:** [portfolio-luccacc.vercel.app](https://portfolio-luccacc.vercel.app/)
+
+---
+
+## Core Features
+
+- **Multilingual interface:** English, Portuguese, Chinese, German, French, and Russian content modules.
+- **Theme system:** light and dark visual modes managed through React context.
+- **Responsive layout:** project, certificate, about, service, and contact views adapted to different viewport sizes.
+- **Motion and navigation:** Framer Motion transitions, Lenis smooth scrolling, and section-based navigation.
+- **Project showcase:** structured cards for software projects, technologies, links, and technical descriptions.
+- **Curriculum access:** downloadable Portuguese and English résumé files.
+- **Deployment configuration:** Vercel routing configured for the React single-page application.
 
 ---
 
 ## Technology Stack
 
-* **React.js** - Core Framework & State Management Contexts
-* **TailwindCSS** - Utility classes & absolute positional layouts
-* **Framer Motion** - Spring animations, structural renders, and DOM element staggering
-* **Lenis Smooth Scroll** - Fluid mathematical scroll friction
+| Area | Technologies |
+| --- | --- |
+| Application | React 17, JavaScript, Create React App / React Scripts 5 |
+| State | React Context API |
+| Interface | Custom CSS, Tailwind CSS utilities loaded through CDN |
+| Motion | Framer Motion, Lenis, react-scroll |
+| Visual effects | react-tsparticles |
+| Deployment | Vercel |
 
 ---
 
-## Running Locally
+## Project Structure
 
-If you are a direct collaborator or evaluating this code, you can run this ecosystem locally:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/luccalck/portfolio.git
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   cd portfolio 
-   npm install
-   ```
-
-3. **Spin up the local server:**
-   ```bash
-   npm start
-   ```
-
-*(This application was configured using modern ECMAScript standards and the standard robust React node ecosystem. Node version 18+ is recommended).*
+```text
+portfolio/
+|-- public/                    # Static assets, metadata, certificates, and CV files
+|-- src/
+|   |-- assets/                # Images, SVGs, and particle configuration
+|   |-- components/            # Navigation, hero, cards, particles, and loading UI
+|   |-- contexts/              # Language context and locale selection
+|   |-- translations/          # EN, PT, ZH, DE, FR, and RU content
+|   |-- views/                 # About, projects, certificates, services, and contact
+|   |-- App.js                 # Main application composition
+|   `-- index.css              # Global visual system and responsive styles
+|-- package.json
+`-- vercel.json
+```
 
 ---
 
-## Legal & Copyright
+## Run Locally
 
-**Copyright (c) 2026 Lucca Castilho. All Rights Reserved.**
+### Prerequisites
 
-This repository is strictly public for demonstrational and recruitment purposes. 
-The commercial and non-commercial copying, modification, or deployment of this personalized UI and codebase is explicitly prohibited as delineated within the [LICENSE](./LICENSE) file. 
+- Node.js 18 or newer;
+- npm.
 
-Feel free to inspect the code to view structural patterns and engineering capacities.
+### Installation
+
+```bash
+git clone https://github.com/luccalck/portfolio.git
+cd portfolio
+npm install
+npm start
+```
+
+Create a production build with:
+
+```bash
+npm run build
+```
+
+---
+
+## License
+
+Copyright © 2026 Lucca Castilho. See [LICENSE](LICENSE) for usage terms.
